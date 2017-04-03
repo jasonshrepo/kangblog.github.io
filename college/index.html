@@ -8,6 +8,10 @@
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
 
+<link rel="stylesheet" href="css/styles2.css" type="text/css" media="screen" />
+
+
+
 <link href="css/styles.css" type="text/css" media="all" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/history.css"> 
@@ -29,39 +33,7 @@ text-shadow: 0 0 10px #529DFF;
 text-shadow: 0 0 10px #529DFF;}
 #tt_bg{font-size:3.5em;color:#fff;
 text-shadow: 0 0 10px #529DFF;}
-#topmenu{
-		width:810px;
-		margin:40px auto 0 auto;height:40px;
-		position:relative;
-	}
-	#topmenu ul {
-		margin:0;
-		padding:0;
-	}
-	#topmenu ul li {
-		float:left;
-		font-size:12px;	
-		list-style:none;
-		background:#222;
-		position:relative;
-		text-align:center;
-		text-transform:uppercase;
-		width:70px;
-		margin:0 10px;display:inline;	
-		line-height:30px;
-	}
-	#topmenu ul li a {
-		color:#aaa;	
-		text-decoration:none;
-	}
-	#topmenu ul li a:hover {
-		color:#fff;	
-	}
-	#topmenu ul li.active a{
-		color:#fff;font-weight:800;
-	}
-	
-	.box_skitter{margin:0px auto;}
+
 </style>
 <script type="text/javascript" language="javascript">
 function thenceThen(timespan){
@@ -79,28 +51,59 @@ window.onload=function(){
 }
 </script>
 
-
-
-<!-- Skitter Styles -->
-	<link href="css/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+<!-- Meta information -->
+	<meta charset="utf-8">
 	
-	<!-- Skitter JS -->
-	<script type="text/javascript" language="javascript" src="js/jquery-1.6.3.min.js"></script>
-	<script type="text/javascript" language="javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" language="javascript" src="js/jquery.skitter.min.js"></script>
+	<title>Estro - jQuery Ken Burns &amp; swipe effect slider plugin - by pixelentity - Example 1</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index, follow" /> 
+	<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+	  
+	<!-- favicon & idevice homepage thumb -->
+	<link rel="shortcut icon" href="favicon.jpg">
 	
-	<!-- Init Skitter -->
-	<script type="text/javascript" language="javascript">
-		$(document).ready(function() {
-			$('.box_skitter_large').skitter({
-				theme: 'clean',
-				numbers_align: 'center',
-				progressbar: true, 
-				dots: true, 
-				preview: true
-			});
-		});
+	<!-- google font -->
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold|Droid+Sans' rel='stylesheet' type='text/css'>
+	
+	
+	<!-- main stylesheets -->
+	
+	
+	<link rel="stylesheet" href="css/960.css" />
+	
+	<link rel="stylesheet" href="css/skin.min.css" />
+	
+	
+	<!-- import jQuery -->
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/preview.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.pixelentity.kenburnsSlider.min.js"></script>
+		
+	<!--specify size of slider-->
+	<style>		
+		.peKenBurns {
+       		width: 920px;
+       		height: 450px;
+		}
+	</style>
+	
+	<script>
+
+		jQuery(function($){
+			$(".peKenBurns").peKenburnsSlider({externalFont:true})
+		})
+		// for google fonts, handle captions sizing only after fonts are loaded
+		jQuery(window).load(function() {
+			$(".peKenBurns").each(function() {
+				$(this).data("peKenburnsSlider").fontsLoaded()
+			})
+		})
+		
 	</script>
+
+
 
 
 </head>
@@ -138,21 +141,16 @@ window.onload=function(){
 
 
           
-<div id="arrow">
-	<ul>
-		<li class="arrowup"></li>
-		<li class="arrowdown"></li>
-	</ul>
-</div>
+
 
 <div id="history">
 
 	<div class="title">
-		<h2>网站成长史</h2>
+		<h2>班级成长史</h2>
 		<div id="circle">
 			<div class="cmsk"></div>
 			<div class="circlecontent">
-				<div thisyear="2013" class="timeblock">
+				<div thisyear="2017" class="timeblock">
 					<span class="numf"></span>
 					<span class="nums"></span>
 					<span class="numt"></span>
@@ -170,33 +168,25 @@ window.onload=function(){
 			<li style="margin-top:-110px;">
 				<div class="liwrap">
 					<div class="lileft">
-						<div class="date">
-							<span class="year">2013</span>
-							<span class="md">0905</span>
-						</div>
+						
 					</div>
 					
-					<div class="point"><b></b></div>
 					
-					<div class="liright">
-						<div class="histt"><a href="#">HTML5 CSS3 发展历程 发布</a></div>
-						<div class="hisct">修正了上一版本中的错误，欢迎大家测试，如果发现问题请联系我们,谢谢。</div>
-					</div>
-				</div>
-			</li>
+					
+					
 			<li>
 				<div class="liwrap">
 					<div class="lileft">
 						<div class="date">
 							<span class="year">2013</span>
-							<span class="md">0807</span>
+							<span class="md">09.05</span>
 						</div>
 					</div>
 					
 					<div class="point"><b></b></div>
 					
 					<div class="liright">
-						<div class="histt"><a href="#">HTML5 CSS3 发展历程 发布</a></div>
+						<div class="histt"><a href="#">我们从五湖四海相聚到文理</a></div>
 						<div class="hisct">随着用户的访问量增大,功能不能满足需求，我们进行了重大更新，对设计和功能都进行大幅度的升级,增加了原创，欣赏版块</div>
 					</div>
 				</div>
@@ -205,15 +195,15 @@ window.onload=function(){
 				<div class="liwrap">
 					<div class="lileft">
 						<div class="date">
-							<span class="year">2013</span>
-							<span class="md">0528</span>
+							<span class="year">2014</span>
+							<span class="md">09.12</span>
 						</div>
 					</div>
 					
 					<div class="point"><b></b></div>
 					
 					<div class="liright">
-						<div class="histt"><a href="#">官方微博</a></div>
+						<div class="histt"><a href="#">初入大二</a></div>
 						<div class="hisct">推出了HTML5 CSS3 官方微博</div>
 					</div>
 				</div>
@@ -223,15 +213,15 @@ window.onload=function(){
 				
 					<div class="lileft">
 						<div class="date">
-							<span class="year">2013</span>
-							<span class="md">0524</span>
+							<span class="year">2016</span>
+							<span class="md">09.07</span>
 						</div>
 					</div>
 					
 					<div class="point"><b></b></div>
 					
 					<div class="liright">
-						<div class="histt"><a href="#">HTML5 CSS3 发展历程 上线</a></div>
+						<div class="histt"><a href="#">步入大三</a></div>
 						<div class="hisct">虽然功能还未健全，但是我们已迫不及待的让它去接受广大用户的火眼金睛</div>
 					</div>
 				</div>
@@ -240,69 +230,21 @@ window.onload=function(){
 				<div class="liwrap">
 					<div class="lileft">
 						<div class="date">
-							<span class="year">2013</span>
-							<span class="md">0508</span>
+							<span class="year">2017</span>
+							<span class="md">06.15</span>
 						</div>
 					</div>
 					
 					<div class="point"><b></b></div>
 					
 					<div class="liright">
-						<div class="histt"><a href="#">初期讨论</a></div>
+						<div class="histt"><a href="#">我们毕业了...</a></div>
 						<div class="hisct">在集体探讨下，发现目前的HTML5 CSS3 发展历程已经不能满足需求，集体讨论=，这时候，韩老师之前的设计稿被端上了会议桌。</div>
 					</div>
 				</div>
 			</li>
-			<li>
-				<div class="liwrap">
-					<div class="lileft">
-						<div class="date">
-							<span class="year">2012</span>
-							<span class="md">0701</span>
-						</div>
-					</div>
-					
-					<div class="point"><b></b></div>
-					
-					<div class="liright">
-						<div class="histt"><a href="#">灵感迸发</a></div>
-						<div class="hisct">某天晚上的凌晨三点一刻，预想建立这样一个功能的网站，专为网页设计师。</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="liwrap">
-				
-					<div class="lileft">
-						<div class="date">
-							<span class="year">2012</span>
-							<span class="md">0524</span>
-						</div>
-					</div>
-					
-					<div class="point"><b></b></div>
-					
-					<div class="liright">
-						<div class="histt"><a href="#">HTML5 CSS3 发展历程 上线</a></div>
-						<div class="hisct">虽然功能还未健全，但是我们已迫不及待的让它去接受广大用户的火眼金睛</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="liwrap">
-					<div class="lileft">
-						<div class="date">
-							<span class="year">2013</span>
-							<span class="md">3月1日</span>
-						</div>
-					</div>
-					
-					<div class="point"><b></b></div>
-					
-					<div class="liright">
-						<div class="histt"><a href="#">初见成效</a></div>
-						<div class="hisct">代码笔记第一版上线</div>
-					</div>
+		
+																	
 				</div>
 			</li>
 		</ul>
@@ -358,14 +300,66 @@ div.setAttribute("class", "btn_sound btn_no_sound");
 
 <div class="wage_sec" id="wage_sec">
 		
-<div class="box_skitter box_skitter_large">
-	<ul>
-		<li><a href="#cube"><img src="images/example/001.jpg" class="cube" /></a><div class="label_text"><p>cube</p></div></li>
-		<li><a href="#cubeRandom"><img src="images/example/002.jpg" class="cubeRandom" /></a><div class="label_text"><p>cubeRandom</p></div></li>
-		<li><a href="#block"><img src="images/example/003.jpg" class="block" /></a><div class="label_text"><p>block</p></div></li>
-		<li><a href="#cubeStop"><img src="images/example/004.jpg" class="cubeStop" /></a><div class="label_text"><p>cubeStop</p></div></li>	
-	</ul>
-</div>
+<div id="annotation">
+		<div id="wrapper" class="container_16"> 
+			
+			
+			<!--start peKenBurns slider-->
+			<div class="peKenBurns peNoJs" data-autopause="image" data-thumb="enabled" data-mode="kb" data-controls="always" data-shadow="enabled" data-logo="enabled">
+				 
+			   <div class="peKb_active" data-delay="5" data-thumb="img/thumbs/kb_01.jpg">
+			   <img src="img/kb_01.jpg" alt="Banner Image 1" />
+			   <h1>HI &amp; WELCOME TO THE "ESTRO" SLIDER BY PIXELENTITY</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_00.jpg">
+			   <a class="video hd autoplay loop skiptonext" href="http://sc.chinaz.com"><img src="img/blank.png" data-src="img/kb_00.jpg" alt="Banner Image 1" /></a>
+			   <h1>A KICK-ASS JQUERY PLUGIN WITH KEN BURNS &amp; 2-WAY SWIPE TRANSITIONS</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_02.jpg">
+			   <img src="img/blank.png" data-src="img/kb_02.jpg" alt="Banner Image 1" />
+			   <h1>FINE TUNED, SLEEK &amp; SMOOTH, THIS SLIDER WILL IMPRESS YOUR VISITORS</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_03.jpg">
+			   <img src="img/blank.png" data-src="img/kb_03.jpg" alt="Banner Image 1" />
+			   <h1>SUPPORTS ANIMATED CAPTIONS, YOUTUBE &amp; VIMEO VIDEO, SINGLE PAGE MULTI-USE</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_04.jpg">
+			   <a class="video hd autoplay loop skiptonext" href="http://sc.chinaz.com"><img src="img/blank.png" data-src="img/kb_04.jpg" alt="Banner Image 1" /></a>
+			   <h1>CHOOSE FROM MULTIPLE SKINS TO SUIT YOUR OWN STYLE</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_05.jpg">
+			   <img src="img/blank.png" data-src="img/kb_05.jpg" alt="Banner Image 1" />
+			   <h1>BONUS MINIMAL THUMBNAIL MODE WITH KEN BURNS ROLLOVER EFFECT </h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_06.jpg">
+			   <img src="img/blank.png" data-src="img/kb_06.jpg" alt="Banner Image 1" />
+			   <h1>GORGEOUS ANIMATED TIMER INTEGRATED INTO THE CURRENT SLIDE BUTTON</h1>
+			   </div>
+				 
+			</div>	
+			<!--end peKenBurns slider -->
+				  
+			
+			  </div>
+			
+			  <!--end menu wrapper-->
+			 
+		 </div>
+		 <!--end wrapper-->
+		</div>
+		<!--end annotation-->
 	
     	</div>
 
@@ -381,17 +375,495 @@ div.setAttribute("class", "btn_sound btn_no_sound");
     </div>
   </div>
 
+   <div class="wage_sec" id="wage_sec">
+      <div class="content">
+<div class="case-content">
+
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/1.jpg" alt="学习LOS" height=100 width=100></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>邓思敏</h3>
+					<p><strong>201318034034</strong>
+                                             <p>重庆-合川</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>房芳</h3>
+					<p><strong>201318034035</strong>
+                                             <p>陕西-咸阳</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>谢克新</h3>
+					<p><strong>201318034037</strong>
+                                             <p>重庆-北碚</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>隆江</h3>
+					<p><strong>201318034038</strong>
+                                             <p>重庆-丰都</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>刘准</h3>
+					<p><strong>201318034039</strong>
+                                             <p>湖南-张家界</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>赵培超</h3>
+					<p><strong>201318034040</strong>
+                                             <p>河北-咸阳</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>谌宏凯</h3>
+					<p><strong>2013180340342</strong>
+                                             <p>贵州-咸阳</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>戴开远</h3>
+					<p><strong>201318034043</strong>
+                                             <p>重庆-璧山</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>张硕果</h3>
+					<p><strong>201318034044</strong>
+                                             <p>重庆-咸阳</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题二</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题三</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题四</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题二</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题三</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题四</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题二</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题三</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题二</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/3.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题三</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题四</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>标题五</h3>
+					<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题四</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>标题五</h3>
+					<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/4.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题四</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>标题五</h3>
+					<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>标题五</h3>
+					<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>标题五</h3>
+					<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/5.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+					<h3>标题五</h3>
+					<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+
+
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/2.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题七</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a href="http://robotkang.cc/liuyan/">
+				<div class="spinner"></div>
+				<div class="img"><img src="images/1.jpg" alt="学习" height=200 width=200></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>标题八</h3>
+						<p>好好学习，天天向上</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+</div>
+
+<div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div>
+
+
+ </div>
+  </div>
 
 
 <div class="wage_sec" id="wage_sec">
-		<div class="content">
-    		<div class="tt_bg">Copyright &copy; 2017.Robotkang. All rights reserved.</div>
-    		<br/>
+		<div class="content"><br/><br/><br/>
+    		<div align="center" ><h2>Copyright &copy; 2017.Robotkang. All rights reserved.</h2></div>
+    		<br/><br/><br/>
     		</div>
     	</div>
 
 
+<div class="wage_sec" id="wage_sec">
+		<div class="content">
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/c9a69f6a.js","daovoice")
+
+daovoice ('init', {
+  app_id: "c9a69f6a"
+});
+daovoice  ('update');</script>
+
+
+	</div>
+    	</div>
+
 </body>
-
-
 </html>
